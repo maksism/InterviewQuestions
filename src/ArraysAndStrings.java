@@ -1,11 +1,11 @@
-/*
+/**
     This is where I will post all my solutions to the interview questions
     about Arrays and Strings from Cracking the Coding Interview
 
     We will assume all strings are in unicode.
 
     Author: Maks Kozak (Maksism)
- */
+ **/
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -24,7 +24,7 @@ public class ArraysAndStrings
             isUnique : A Boolean to tell us if it is unique
             charCount : An Int Array set to 128 to count all the possible unicode characters
     */
-    private static void IsUnique(String string)
+    public static void IsUnique(String string)
     {
         boolean isUnique = true;
         int[] charCount = new int[128];
@@ -57,7 +57,7 @@ public class ArraysAndStrings
             charCount1 : An Int Array set to 128 to count all the possible unicode characters
             charCount2 : An Int Array set to 128 to count all the possible unicode characters
     */
-    private static void CheckPerm(String string1, String string2)
+    public static void CheckPerm(String string1, String string2)
     {
         int[] charCount1 = new int[128];
         int[] charCount2 = new int[128];
@@ -86,7 +86,7 @@ public class ArraysAndStrings
             outputURL : An array that is set to the length of the worst case, all spaces
             numberOfSpaces : Keeps track of all the spaces in the string
      */
-    private static void URLify(String string, int length)
+    public static void URLify(String string, int length)
     {
         char[] outputURL = new char[3*length];
         int numberOfSpaces = 0;
@@ -132,7 +132,7 @@ public class ArraysAndStrings
             palindromeString : A Char Array palindrome that will be returned character by character
 
      */
-    private static void PalindromePerm(String string)
+    public static void PalindromePerm(String string)
     {
         int[] charCount = new int[128];
         char[] palindromeString = new char[string.length()];
@@ -224,7 +224,7 @@ public class ArraysAndStrings
             oneAway : Used to keep track of if we are one edit away
             edits : How many edits we used.
     */
-    private static void OneAway(String string1, String string2)
+    public static void OneAway(String string1, String string2)
     {
         boolean oneAway = false;
         int edits = 0;
@@ -475,30 +475,5 @@ public class ArraysAndStrings
                 matrix[i][j] = new Random().nextInt(100);
 
         return matrix;
-    }
-
-    public static void main(String[] args)
-    {
-        String inputString = "waterbottle";
-        String inputString1 = "terbottlerwa";
-
-        int arrayMaxSize = 4;
-        int[][] matrix = GenerateRandomMatrix(arrayMaxSize, arrayMaxSize);
-
-        //IsUnique(inputString);
-        //CheckPerm(inputString, inputString1);
-        //URLify(inputString, inputString.length());
-        //PalindromePerm(inputString);
-        //OneAway(inputString, inputString1);
-        //StringCompression(inputString);
-        //StringCompression(inputString1);
-
-        //DisplayMatrix(matrix);
-        //matrix = RotateMatrix(matrix);
-        //DisplayMatrix(matrix);
-        //matrix = ZeroedMatrix(matrix);
-        //DisplayMatrix(matrix);
-
-        StringRotation(inputString1, inputString);
     }
 }
