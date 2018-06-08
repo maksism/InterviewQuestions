@@ -1,3 +1,5 @@
+import sun.awt.image.ImageWatched;
+
 import java.util.Random;
 
 /**
@@ -19,21 +21,71 @@ public class MainTest
 
     public static void TestLinkedList()
     {
-        LinkedList newList = new LinkedList(0);
+        Random randInt = new Random();
+        int pos = 0;
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
 
-        for(int i = 1; i < 6; i++)
-        {
-            newList.Append(i);
-        }
+        //RemoveDuplicates Test
+        //list1.GenerateRandomList(10,5);
+        //list1.PrintLinkedList();
+        //list1 = LinkedList.RemoveDuplicates(list1);
+        //list1.PrintLinkedList();
 
+        //KthFromLast Test
+        //for(int i = 1; i <= list1.GetLength(); i++)
+        //    System.out.println("The " + i + " th to last element: " + LinkedList.KthToLast(list1, i));
 
-        System.out.println("Length of list: " + LinkedList.GetLength(newList));
-        LinkedList.PrintLinkedList(newList);
-        //newList = LinkedList.DeleteNode(newList, 5);
-        newList = LinkedList.RemoveDuplicates(newList);
-        LinkedList.PrintLinkedList(newList);
-        for(int i = 1; i <= LinkedList.GetLength(newList); i++)
-            System.out.println("The " + i + " th to last element: " + LinkedList.KthToLast(newList, i));
+        //DeleteMiddleNode Check
+        //list1.GenerateRandomList(10,50);
+        //list.PrintLinkedList();
+        //while (pos <= 0 || pos > LinkedList.GetLength(list1))
+        //    pos = randInt.nextInt(LinkedList.GetLength(list1));
+        //System.out.println("Returning node from position: " + pos);
+        //list2 = LinkedList.ReturnNodeN(list1, pos);
+        //list.PrintLinkedList();
+        //list2.DeleteMiddleNode(list2);
+        //list.PrintLinkedList();
+        //list.PrintLinkedList();
+
+        //Partition Check
+        //LinkedList partitionedList = LinkedList.Partition(list1, randInt.nextInt(10));
+        //list.PrintLinkedList(partitionedList);
+
+        //SumListBackwards Check
+        //list.PrintLinkedList();
+        //list.PrintLinkedList();
+        //LinkedList sumList = LinkedList.SumListBackwards(list1, list2);
+        //list.PrintLinkedList(sumList);
+
+        //SumListForwards Check
+        //list.PrintLinkedList();
+        //list.PrintLinkedList();
+        //LinkedList sumList2 = LinkedList.SumListForwards(list1, list2);
+        //list.PrintLinkedList(sumList2);
+
+        //IsPalindrome Check
+        //list.PrintLinkedList();
+        //System.out.println("Is this list a palindrome: " + LinkedList.IsPalindrome(list1));
+        
+        //IsIntersection Check
+        //list1.GenerateRandomList(5,50);
+        //list2.GenerateRandomList(5,50);
+        //list.PrintLinkedList();
+        //list.PrintLinkedList();
+        //System.out.println("Do the two lists intersect: " + LinkedList.IsIntersection(list1, list2));
+        //list1.Append(list2);
+        //list.PrintLinkedList();
+        //list.PrintLinkedList();
+        //System.out.println("Do the two lists intersect: " + LinkedList.IsIntersection(list1, list2));
+
+        //LoopDetection Check
+        //LinkedList circularList = new LinkedList();
+        //circularList.GenerateRandomList(randInt.nextInt(10), 50);
+        //list.PrintLinkedList(circularList);
+        //LinkedList.LoopDetection(circularList);
+        //LinkedList.CreateCircularList(circularList);
+        //LinkedList.LoopDetection(circularList);
     }
 
     public static void TestArraysAndStrings()
