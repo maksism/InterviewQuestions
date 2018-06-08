@@ -1,7 +1,3 @@
-import sun.awt.image.ImageWatched;
-
-import java.util.Random;
-
 /**
  This is where I will post all my solutions to the interview questions
  about Arrays and Strings from Cracking the Coding Interview
@@ -11,12 +7,55 @@ import java.util.Random;
  Author: Maks Kozak (Maksism)
  **/
 
+import java.util.Random;
+
 public class MainTest
 {
     public static void main(String[] args)
     {
         //TestArraysAndStrings();
-        TestLinkedList();
+        //TestLinkedList();
+        TestStacksAndQueues();
+    }
+
+    public static void TestStacksAndQueues()
+    {
+        Random randInt = new Random();
+        Stack newStack = new Stack();
+
+        QueueWithStacks myQueue = new QueueWithStacks();
+
+        //Min Check
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    newStack.Push(10 - i);
+        //    System.out.println("The min is: " + newStack.Min());
+        //}
+        //for (int i = 0; i < 10; i++)
+        //{
+        //   System.out.println("Popped: " + newStack.Pop() + " New Min: " + newStack.Min());
+        //}
+
+        //QueueWithStacks Check
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    myQueue.Add(10 - i);
+        //}
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    System.out.println(myQueue.Remove());
+        //}
+
+        //SortStack Check
+        Stack sortedStack = new Stack();
+        for (int i = 0; i < 5; i++)
+        {
+            newStack.Push(randInt.nextInt(20));
+        }
+        newStack.PrintStack();
+        sortedStack = Stack.SortStack(newStack);
+        sortedStack.PrintStack();
+
     }
 
     public static void TestLinkedList()
