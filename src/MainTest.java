@@ -9,17 +9,14 @@
 
 import java.util.Random;
 
-public class MainTest
-{
-    public static void main(String[] args)
-    {
+public class MainTest {
+    public static void main(String[] args) {
         //TestArraysAndStrings();
         //TestLinkedList();
         TestStacksAndQueues();
     }
 
-    public static void TestStacksAndQueues()
-    {
+    public static void TestStacksAndQueues() {
         Random randInt = new Random();
         Stack newStack = new Stack();
 
@@ -47,16 +44,42 @@ public class MainTest
         //}
 
         //SortStack Check
-        Stack sortedStack = new Stack();
-        for (int i = 0; i < 5; i++)
-        {
-            newStack.Push(randInt.nextInt(20));
-        }
-        newStack.PrintStack();
-        sortedStack = Stack.SortStack(newStack);
-        sortedStack.PrintStack();
+        //Stack sortedStack = new Stack();
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    newStack.Push(randInt.nextInt(20));
+        //}
+        //newStack.PrintStack();
+        //sortedStack = Stack.SortStack(newStack);
+        //sortedStack.PrintStack();
 
+        //AnimalShelter Check
+        /*
+        AnimalShelter animalShelter = new AnimalShelter();
+        for (int i = 0; i < randInt.nextInt(15); i++) {
+            animalShelter.Enqueue(randInt.nextInt(2));
+        }
+        animalShelter.petsAvailable.PrintLinkedList();
+
+        int pref;
+        while (animalShelter.petsAvailable != null)
+        {
+            pref = randInt.nextInt(4);
+
+            if (pref == 0)
+            {
+                animalShelter.petsAvailable = animalShelter.DequeueDog();
+            } else if (pref == 1)
+            {
+                animalShelter.petsAvailable = animalShelter.DequeueCat();
+            } else
+                {
+                animalShelter.petsAvailable = animalShelter.DequeueAny();
+            }
+        }
+        */
     }
+
 
     public static void TestLinkedList()
     {

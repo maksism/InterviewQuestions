@@ -85,6 +85,7 @@ public class Stack
             return false;
     }
 
+    //A basic method to print the Stack;
     public void PrintStack()
     {
         Stack temp = top;

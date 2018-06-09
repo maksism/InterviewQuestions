@@ -107,6 +107,15 @@ public class LinkedList
         return contains;
     }
 
+    //A basic method for returning data
+    public int GetData()
+    {
+        if (this == null)
+            return -1;
+        else
+            return data;
+    }
+
     //Basic method to to generate a Random Linked List with of size x with an upper bound of y
     public void GenerateRandomList(int size, int bound)
     {
